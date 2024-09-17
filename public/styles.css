@@ -281,3 +281,54 @@ button:hover {
     padding: 20px;
     text-align: center;
 }
+
+
+/* Cabeçalho da Página de Agradecimento */
+.thanks-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .thanks-header h1 {
+    margin: 0;
+  }
+  
+  /* Conteúdo Principal da Página de Agradecimento */
+  .thanks-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .thanks-main p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .cta-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Rodapé da Página de Agradecimento */
+  .thanks-footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
