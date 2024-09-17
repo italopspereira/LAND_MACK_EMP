@@ -64,28 +64,29 @@
         </section>
         <section id="signup" class="signup-form">
             <h2>Inscreva-se para Receber Atualizações</h2>
-            <form id="lead-form" netlify method="POST" action="/thanks.html" data-netlify="true">
+            <form id="signupForm" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="signupForm">
                 <div class="form-group">
-                    <label for="name">Nome Completo</label>
-                    <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
+                  <label for="name">Nome Completo</label>
+                  <input type="text" id="name" name="name" placeholder="Digite seu nome completo" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Número de Telefone</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Digite seu número de telefone (opcional)">
+                  <label for="phone">Número de Telefone</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Digite seu número de telefone (opcional)">
                 </div>
                 <div class="form-group">
-                    <label for="interest">Seu Interesse</label>
-                    <input type="text" id="interest" name="interest" placeholder="Ex: Tecnologia, Gadgets, etc." required>
+                  <label for="interest">Seu Interesse</label>
+                  <input type="text" id="interest" name="interest" placeholder="Ex: Tecnologia, Gadgets, etc." required>
                 </div>
                 <div class="form-group">
-                    <button type="submit">Enviar</button>
+                  <button type="submit">Enviar</button>
                 </div>
                 <div id="result-message"></div>
-            </form>
+              </form>
         </section>
         <section class="testimonials">
             <h2>O que dizem nossos leitores</h2>
