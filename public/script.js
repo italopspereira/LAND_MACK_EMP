@@ -1,34 +1,29 @@
-document.getElementById('lead-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão de submissão do formulário
-
-    // Captura os dados do formulário
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        interest: document.getElementById('interest').value
-    };
-
-    // Envia os dados para o backend
-    fetch('/submit-form', {
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('signupForm');
+    const resultMessage = document.getElementById('result-message');
+  
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      fetch('/', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    })
-    .then(response => response.json())
-    .then(data => {
-        // Exibe uma mensagem de sucesso
-        const resultMessage = document.getElementById('result-message');
-        resultMessage.textContent = data.message;
-        resultMessage.style.color = 'green';
-    })
-    .catch(error => {
-        console.error('Erro:', error);
-        // Exibe uma mensagem de erro
-        const resultMessage = document.getElementById('result-message');
+        body: formData,
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = '/thanks.html'; // Redireciona para a página de agradecimento
+        } else {
+          resultMessage.textContent = 'Ocorreu um erro ao enviar os dados.';
+          resultMessage.style.color = 'red';
+        }
+      })
+      .catch(error => {
         resultMessage.textContent = 'Ocorreu um erro ao enviar os dados.';
         resultMessage.style.color = 'red';
+        console.error('Erro:', error);
+      });
     });
-});
+  });
+  
